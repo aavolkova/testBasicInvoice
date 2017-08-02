@@ -36,9 +36,15 @@ public class MainController {
 
 
     @RequestMapping("/listproducts")
-    public @ResponseBody String listProducts(Model model)
+    public String listProducts(Model model)
     {
-        return "This is a list of your products";
+        String dependency1 = "spring-boot-starter-thymeleaf";
+        String dependency2 = "spring-boot-starter-web";
+        String dependency3 = "spring-boot-starter-test";
+        model.addAttribute("myMessage1", dependency1);
+        model.addAttribute("myMessage2", dependency2);
+        model.addAttribute("myMessage3", dependency3);
+        return "listproducts";
     }
 
     @PostMapping("/addproduct")

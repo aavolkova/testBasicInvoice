@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Fourth HTML Page</title>
 </head>
 <body>
 I can type text in here
 <h1>This is a list of your products</h1>
 <p>This is sample text from a paragraph tag</p>
-<p th:text="${myMessage}"> This is a placeholder</p>
+<p th:text="'List ot Dependencies: '" />
+<!--/*@thymesVar id="myMessage" type=""*/-->
+<p th:text="    ${myMessage1}"> This is a placeholder</p>
+<p th:text="    ${myMessage2}"> This is a placeholder</p>
+<p th:text="    ${myMessage3}"> This is a placeholder</p>
 </body>
 </html>
